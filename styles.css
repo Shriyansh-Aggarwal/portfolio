@@ -1,21 +1,126 @@
+.doto-main {
+  font-family: "Doto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "ROND" 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Doto, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
+    height: 90vh;
     background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
 }
 
-section {
+#main {
+    border: 0.4em solid rgba(8, 227, 206, 0.462);
+    border-radius: 10px;
+    height: 100%;
+    margin: 2em;
+}
+
+.typing-container {
+    display: flex;
+    justify-content: center;
+}
+
+.typing-text {
+    margin: 0.5em;
+    font-size: 3em;
+    color: white;
+    text-wrap: nowrap;
+    overflow: hidden;
+    border-right: 2px solid rgba(8, 227, 206, 0.6);
+    font-family: Doto, sans-serif;
+    animation: typing 1s steps(8, end), blink 0.5s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 8ch; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+#inner-main {
+    display: flex;
+    flex: 1;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+
+#about {
+    display: flex;
+    flex: 1;
     margin: 2em;
     padding: 1em;
-    background-color: white;
+    background-color: rgba(5, 5, 5, 0.284);
+    border-radius: 7em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+}
+
+#showcase {
+    flex: 2;
+    margin: 2em;
+    padding: 1em;
+    background-color: rgba(5, 5, 5, 0.284);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#projects {
+    color: white;
+}
+
+#projshow {
+    color: white;
+}
+
+#logo {
+    flex: 2;
+    display: flex;
+    align-items: center;
+}
+
+#pfp {
+    border-color: rgba(8, 227, 206, 0.462);
+    border-style: solid;
+    border-radius: 100em;
+    width: 9em;
+    height: 9em;
+}
+
+#info {
+    flex: 5;
+}
+
+#name {
+    margin: 0;
+    margin-top: 0.4em;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+}
+
+#socials {
+    text-align: center;
+    color: white;
+    font-size: 1em;
+}
+
+.soc {
+    margin: 0.3em;
+    width: 2em;
+    height: 1.8em;
 }
